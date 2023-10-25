@@ -38,17 +38,17 @@ class TestTriangleClassification(unittest.TestCase):
         expected = Triangle.Type.INVALID
         self.assertEqual(actual, expected)
 
-        #5 - Does not follow [(a+b > c), (b+c > a), (c+a > b)] and one size is 0
+        #5 - Does not follow [(a+b > c), (b+c > a), (c+a > b)] and one side is 0
         actual = Triangle.classify(0, 4, 6)
         expected = Triangle.Type.INVALID
         self.assertEqual(actual, expected)
 
-        #6 - Does not follow [(a+b > c), (b+c > a), (c+a > b)] and one size is 0
+        #6 - Does not follow [(a+b > c), (b+c > a), (c+a > b)] and one side is 0
         actual = Triangle.classify(6, 0, 4)
         expected = Triangle.Type.INVALID
         self.assertEqual(actual, expected)
 
-        #7 - Does not follow [(a+b > c), (b+c > a), (c+a > b)] and one size is 0
+        #7 - Does not follow [(a+b > c), (b+c > a), (c+a > b)] and one side is 0
         actual = Triangle.classify(12, 8, 0)
         expected = Triangle.Type.INVALID
         self.assertEqual(actual, expected)
